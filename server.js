@@ -21,7 +21,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-
+// code for database--------------------------
 var pool = new Pool(config);
 app.get('/test-db' ,function(req, res) {
    // make a select request
@@ -38,6 +38,7 @@ app.get('/test-db' ,function(req, res) {
    
     
 });
+//*------------------end-----------------------------*//
 
 
 app.get('/ui/style.css', function (req, res) {
